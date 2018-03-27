@@ -1,27 +1,31 @@
-# cpicAngular
+## Overview
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+On this site you will find development resources related to Capital Planning and Investment Control (CPIC) implementation supplied by OMB for the CPIC Community.  Its purpose is to act as an information radiator providing distribution of the latest OMB CPIC Guidance, XSD files, and their respective sample XML submission files, all of which will allow CPIC developers to validate the structure of their own XML submission files.
 
-## Development server
+Other resources provided on this site include:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Important Dates
+Federal IT Dashboard Development Schedules
+Issue Tracking
+Schema
+Validations
+IT Dashboard Development Team’s JIRA Board
 
-## Code scaffolding
+## CPIC Guidance and Submission Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* [OMB Circular A-11](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/assets/a11_current_year/a11_2017.pdf)
+* [FY19 IT Budget – Capital Planning Guidance](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/assets/egov_docs/fy19_it_budget_guidance.pdf)
+* [Federal IT Dashboard Submission Guide](https://github.com/ombegov/ITDB-schema/blob/master/docs/ITDB_Submission_Instructions_v3_25.pdf)
 
-## Build
+## Feedback
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+We encourage the CPIC community to comment and ask questions via the [CPIC Issues GitHub page](https://github.com/ombegov/ITDB-schema/issues). As issues are updated, community subscribers will receive automated updates from GitHub. You can check the status of your issue via this page or via GitHub.
 
-## Running unit tests
+We recommend the following format for submitting issues:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Name: Your name here
+Organization: Your organization here
+Urgency: Critical/High/Medium/Low
+Description of Issue: Describe your issue here
+Associated Links: Put internal and external links to resources or data related to this issue here
+When submitting issues on GitHub, do not include any sensitive data. If you have questions or issues pertaining to agency specific data, please directly contact itdashboardsupport@omb.eop.gov.
