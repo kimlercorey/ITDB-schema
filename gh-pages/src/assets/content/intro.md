@@ -4,12 +4,12 @@ On this site you will find development resources related to Capital Planning and
 
 Other resources provided on this site include:
 
-Important Dates
-Federal IT Dashboard Development Schedules
-Issue Tracking
-Schema
-Validations
-IT Dashboard Development Team’s JIRA Board
+* [Important Dates](/#/schedule)
+* [Federal IT Dashboard Development Schedules](/#/schedule)
+* [Issue Tracking](/#/issues?url=https:%2F%2Fapi.github.com%2Frepos%2Fombegov%2FITDB-schema%2Fissues%3Fstate%3Dopen)
+* [Schema](/#/code-links)
+* [Validations](/#/validations)
+* [IT Dashboard Development Team’s JIRA Board](/#/jira-board)
 
 ## CPIC Guidance and Submission Instructions
 
@@ -23,9 +23,10 @@ We encourage the CPIC community to comment and ask questions via the [CPIC Issue
 
 We recommend the following format for submitting issues:
 
-Name: Your name here
-Organization: Your organization here
-Urgency: Critical/High/Medium/Low
-Description of Issue: Describe your issue here
-Associated Links: Put internal and external links to resources or data related to this issue here
+* *Name:* Your name here
+* *Organization:* Your organization here
+* *Urgency:* Critical/High/Medium/Low
+* *Description of Issue:* Describe your issue here
+* *Associated Links:* Put internal and external links to resources or data related to this issue here
+
 When submitting issues on GitHub, do not include any sensitive data. If you have questions or issues pertaining to agency specific data, please directly contact itdashboardsupport@omb.eop.gov.

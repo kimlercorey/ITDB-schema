@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-intro',
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class IntroComponent implements OnInit {
   content: any = '';
 
-  constructor() { }
+  constructor(http: Http) {
+    http.get('https://raw.githubusercontent.com/scottmccaughey/ITDB-schema/master/gh-pages/src/assets/content/intro.md').subscribe(data => {
+      this.content = data.text();
+    });
+  }
 
   ngOnInit() {
   }
