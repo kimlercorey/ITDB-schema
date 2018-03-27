@@ -157,10 +157,14 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 $space-m;
+  margin: $space-l 0 $space-m;
   color: $color-base-header;
   font-weight: $font-weight-normal;
   line-height: $line-height-header;
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   &.major {
     color: inherit;
@@ -376,7 +380,12 @@ svg {
   top: 0;
 }
 
+th {
+  font-weight: $font-weight-bold;
+}
+
 ul {
+  margin-bottom: $space-m;
   padding-left: 1.75rem;
 
   &:last-child li:last-child {
@@ -543,7 +552,6 @@ ul {
   }
 
   th {
-    font-weight: $font-weight-bold;
     text-align: left;
   }
 }

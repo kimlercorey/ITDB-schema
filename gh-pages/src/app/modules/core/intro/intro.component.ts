@@ -7,11 +7,11 @@ import { Http } from '@angular/http';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements OnInit {
-  content: any = '';
+  intro: any = '';
 
   constructor(http: Http) {
     http.get('https://raw.githubusercontent.com/scottmccaughey/ITDB-schema/master/gh-pages/src/assets/content/intro.md').subscribe(data => {
-      this.content = data.text();
+      this.intro = data.text();
     });
   }
 

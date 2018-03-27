@@ -4,20 +4,19 @@ import { Http } from '@angular/http';
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
-  styleUrls: ['./schedule.component.css']
+  styleUrls: ['./schedule.component.scss']
 })
 export class ScheduleComponent implements OnInit {
-  content: any = '';
+  schedule: any = '';
   isOpen = {};
 
   constructor(http: Http) {
     http.get('https://raw.githubusercontent.com/ombegov/ITDB-schema/master/README.md').subscribe(data => {
-
-      const md = data.text();
-      const split = md.split('## Important Dates');
-      console.log(split);
-
-      this.content = data.text();
+      let md = data.text();
+      let split = md.split('## Important Dates');
+      md = '## Important Dates' + split[1];
+      split = md.split('## Quick Links to Files');
+      this.schedule = split[0];
     });
   }
 

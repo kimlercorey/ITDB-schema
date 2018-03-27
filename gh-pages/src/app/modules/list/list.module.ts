@@ -8,12 +8,14 @@ import { NavComponent } from './validation/nav/nav.component';
 import { CodeComponent } from './code/code.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'; //importing the module
+import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MarkdownToHtmlModule.forRoot(),
   ],
   declarations: [IssueComponent, ScheduleComponent, ValidationComponent, DictionaryComponent, NavComponent, CodeComponent],
   exports: [IssueComponent, ScheduleComponent, ValidationComponent, DictionaryComponent, NavComponent, CodeComponent]

@@ -33,7 +33,7 @@ const routes: Routes = [
     component: IssueComponent
   },
   {
-    path: 'code-links',
+    path: 'schema',
     component: CodeComponent
   },
   {
