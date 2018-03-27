@@ -1,0 +1,24 @@
+<article>
+  <h1>Validations</h1>
+  <form class="form-filter grid">
+    <input class="g-m-6" type="text" name="filter" [(ngModel)]="filter" placeholder="Filter Validations">
+  </form>
+  <div>
+    <div *ngFor="let item of validations| filter:filter; let i = index" [attr.data-index]="i">
+      <section>
+        <a (click)="isOpen[i] = !isOpen[i]"><strong>{{item["UI"]}}</strong>: {{item["Validation Description"]}}</a>
+      </section>
+      <aside>
+        <div *ngIf="isOpen[i]">
+          <ul>
+            <li><strong>Validation Type:</strong> {{item["Validation Type"]}}</li>
+            <li><strong>Status:</strong> {{item["Status"]}}</li>
+            <li><strong>Section:</strong> {{item["Section"]}}</li>
+            <li><strong>Sub-Section:</strong> {{item["Sub-Section"]}}</li>
+            <li><strong>Field Type:</strong> {{item["Field Type"]}}</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</article>
