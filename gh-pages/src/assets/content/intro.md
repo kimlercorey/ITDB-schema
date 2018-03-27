@@ -23,10 +23,10 @@ We encourage the CPIC community to comment and ask questions via the [CPIC Issue
 
 We recommend the following format for submitting issues:
 
-* *Name:* Your name here
-* *Organization:* Your organization here
-* *Urgency:* Critical/High/Medium/Low
-* *Description of Issue:* Describe your issue here
-* *Associated Links:* Put internal and external links to resources or data related to this issue here
+* **Name:** Your name here
+* **Organization:** Your organization here
+* **Urgency:** Critical/High/Medium/Low
+* **Description of Issue:** Describe your issue here
+* **Associated Links:** Put internal and external links to resources or data related to this issue here
 
 When submitting issues on GitHub, do not include any sensitive data. If you have questions or issues pertaining to agency specific data, please directly contact itdashboardsupport@omb.eop.gov.
