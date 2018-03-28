@@ -211,8 +211,8 @@ $font-families: (
     (
        (light, 300, normal, normal),
        (lightitalic, 300, italic, normal),
-       (bold, 600, normal, normal),
-       (bolditalic, 600, italic, normal)
+       (bold, 700, normal, normal),
+       (bolditalic, 700, italic, normal)
     )
 );
 
@@ -229,11 +229,11 @@ $font-family-mono: Hack, Consolas, Menlo, Monaco, 'Ubuntu Mono', 'Courier New', 
 
 /*
    c. Font Weights
-      We use the Light (300) weight as a base, and the Semi-Bold (600) sparingly for headers
+      We use the Light (300) weight as a base, and the Bold (700) sparingly for headers
       and emphasis.
 */
 $font-weight-normal: 300;
-$font-weight-bold: 600;
+$font-weight-bold: 700;
 
 /*
    d. Font Sizes
