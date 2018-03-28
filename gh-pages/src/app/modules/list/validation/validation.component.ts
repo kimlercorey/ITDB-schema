@@ -15,17 +15,11 @@ export class ValidationComponent implements OnInit {
   constructor(private _api: ApiService) { }
 
   public ngOnInit() {
-    // console.log(this._api);
-    this._api.loadData('./assets/data/bcdvalids.json').subscribe((results) => {
-
-        // console.log(results)
-        // do stuff with our data here.
-        // ....
-        // asign data to our class property in the end
-        // so it will be available to our template
-        console.log('Validations', results);
-
-        this.validations = results;
+    this._api.loadData('./assets/data/validations.json').subscribe((results) => {
+      const itp = results['ITP Valids'];
+      const bc = results['BC Valids'];
+      const bcd = results['BCD Valids'];
+      this.validations = itp.concat(bc, bcd);
     });
 
   }

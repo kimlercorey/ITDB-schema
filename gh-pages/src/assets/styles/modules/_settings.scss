@@ -271,17 +271,17 @@ $font-size-xxl: ms(3);
 $font-size-xxxl: ms(4);
 $font-size-xxxxl: ms(5);
 
-$font-size-h1: $font-size-xxxl;
-$font-size-h2: $font-size-xxl;
-$font-size-h3: $font-size-xl;
-$font-size-h4: $font-size-l;
+$font-size-h1: $font-size-xxl;
+$font-size-h2: $font-size-xl;
+$font-size-h3: $font-size-l;
+$font-size-h4: $font-size-m;
 $font-size-h5: $font-size-m;
-$font-size-h6: $font-size-s;
+$font-size-h6: $font-size-m;
 
 /*
    e. Line Heights
 */
-$line-height-base: 1.4;
+$line-height-base: 1.5;
 $line-height-header: 1.25;
 $line-height-button: 1;
 

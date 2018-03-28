@@ -304,12 +304,9 @@ main article {
     }
 
     &:nth-child(even) {
-      > section {
-        background-color: $color-neutral-background;
-      }
-
+      > section,
       > aside {
-        background-color: $color-dark-background-alt;
+        background-color: $color-neutral-background;
       }
     }
 
@@ -337,9 +334,6 @@ main article {
     }
 
     > aside {
-      background-color: $color-dark-background-highlight;
-      color: $color-dark-text;
-
       > div {
         overflow-wrap: break-word;
         padding: $space-s $space-m;
