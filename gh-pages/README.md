@@ -1,4 +1,4 @@
-# cpicAngular
+# CPIC
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
@@ -12,7 +12,11 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Deploy
+
+After running `npm run build`, run `npm run deploy` to deploy the build to [GitHub Pages](https://scottmccaughey.github.io/ITDB-schema/).
 
 ## Running unit tests
 
