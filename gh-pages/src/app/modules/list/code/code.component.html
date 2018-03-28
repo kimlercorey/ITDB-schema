@@ -1,12 +1,8 @@
 <article>
   <h1>Schema</h1>
   <section>
-    <h2>Business Case Examples</h2>
-    <app-schema [filename]="'Response_message_only.xml'"></app-schema>
-    <app-schema [filename]="'Response_schemaValidationError.xml'"></app-schema>
-    <app-schema [filename]="'Response_success.xml'"></app-schema>
-    <app-schema [filename]="'annualSubmission.xml'"></app-schema>
-    <app-schema [filename]="'getInformation.xml'"></app-schema>
-    <app-schema [filename]="'monthlySubmission.xml'"></app-schema>
+    <div *ngFor="let schemaCat of schemaCats; let i = index">
+      <markdown-to-html [data]="content"></markdown-to-html>
+    </div>
   </section>
 </article>
