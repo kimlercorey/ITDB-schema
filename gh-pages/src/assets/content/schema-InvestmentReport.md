@@ -1,4 +1,4 @@
-## Investment Report Examples
+## InvestmentReport Examples
 
 * [addDataCenter.xml](#/schema/InvestmentReport/addDataCenter)
 * [addEndUser.xml](#/schema/InvestmentReport/addEndUser)

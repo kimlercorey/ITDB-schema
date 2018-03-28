@@ -1,4 +1,4 @@
-## Business Case Examples
+## BusinessCase Examples
 
 * [Response_message_only.xml](#/schema/BusinessCase/Response_message_only)
 * [Response_schemaValidationError.xml](#/schema/BusinessCase/Response_schemaValidationError)

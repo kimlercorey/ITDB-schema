@@ -17,7 +17,6 @@ import { ScheduleComponent } from './modules/list/schedule/schedule.component';
 import { IssueComponent } from './modules/list/issue/issue.component';
 import { CodeComponent } from './modules/list/code/code.component';
 import { SchemaComponent } from './modules/list/code/schema/schema.component';
-import { SchemaCategoryComponent } from './modules/list/code/schema-category/schema-category.component';
 import { ValidationComponent } from './modules/list/validation/validation.component';
 import { TicketComponent } from './modules/jira/ticket/ticket.component';
 
@@ -41,11 +40,13 @@ const routes: Routes = [
   },
   {
     path: 'schema',
+    pathMatch: 'full',
     component: CodeComponent
   },
   {
     path: 'schema/:schemaCat',
-    component: SchemaCategoryComponent
+    redirectTo: 'schema',
+    pathMatch: 'full'
   },
   {
     path: 'schema/:schemaCat/:schema',
@@ -68,8 +69,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SchemaComponent,
-    SchemaCategoryComponent
+    SchemaComponent
   ],
   imports: [
     BrowserModule,

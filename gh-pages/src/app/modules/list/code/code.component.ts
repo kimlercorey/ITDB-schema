@@ -9,24 +9,22 @@ import { Http } from '@angular/http';
 export class CodeComponent implements OnInit {
   schemaCats: any[];
   businessCase;
-  content;
+  content = {};
   urlRoot = 'https://rawgit.com/scottmccaughey/ITDB-schema/master/gh-pages/src/assets/content/schema-';
 
-  constructor(http: Http) {
+  constructor(private http: Http) {}
 
-    this.schemaCats = ['BusinessCase', 'CIORating', 'ITBudget', 'InvestmentReport'];
-    for (var schemaCat of this.schemaCats) {
-      console.log(schemaCat);
-
-      http.get(this.urlRoot + schemaCat + '.md').subscribe(data => {
-        this.content = data.text();
-      });
-
-    }
-
+  getSchema(schemaCat) {
+    return this.http.get(this.urlRoot + schemaCat + '.md').subscribe(data => {
+      this.content[schemaCat] = data.text();
+    });
   }
 
   ngOnInit() {
+    this.schemaCats = ['BusinessCase', 'CIORating', 'ITBudget', 'InvestmentReport'];
+    for (var schemaCat of this.schemaCats) {
+      this.getSchema(schemaCat);
+    }
   }
 
 }
