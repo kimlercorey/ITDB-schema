@@ -388,14 +388,23 @@ svg {
   top: 0;
 }
 
-th {
-  font-weight: $font-weight-bold;
+table {
+  td,
+  th {
+    padding: $space-s !important;
+  }
+
+  th {
+    font-weight: $font-weight-bold;
+  }
 }
+
 
 ul {
   margin-bottom: $space-m;
   padding-left: 1.75rem;
 
+  &:only-child,
   &:last-child li:last-child {
     margin-bottom: 0;
   }
