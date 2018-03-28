@@ -19,11 +19,16 @@ export class TicketComponent implements OnInit {
     this._api.loadData('./assets/data/egovjira.json').subscribe((results) => {
       let json = results;
       for (var i = 0; i < json.length; i++) {
-        let created = new Date(json[i]['Created']);
+        const created = new Date(json[i]['Created']);
         json[i]['Created'] = monthNames[created.getMonth()] + ' ' + created.getDate() + ', ' + created.getFullYear();
 
-        let updated = new Date(json[i]['Updated']);
+        const updated = new Date(json[i]['Updated']);
         json[i]['Updated'] = monthNames[updated.getMonth()] + ' ' + updated.getDate() + ', ' + updated.getFullYear();
+
+        let description = json[i]['Description'];
+        description = description.replace(/\uFFFD/g, '');
+        description = description.replace(/\{panel\}/g, '');
+        json[i]['Description'] = description;
       }
       this.tickets = json;
     });

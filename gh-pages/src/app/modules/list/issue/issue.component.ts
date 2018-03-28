@@ -20,10 +20,10 @@ export class IssueComponent implements OnInit {
     this._api.loadData(this.url).subscribe((results) => {
       let json = results;
       for (var i = 0; i < json.length; i++) {
-        let created = new Date(json[i]['created_at']);
+        const created = new Date(json[i]['created_at']);
         json[i]['created_at'] = monthNames[created.getMonth()] + ' ' + created.getDate() + ', ' + created.getFullYear();
 
-        let updated = new Date(json[i]['updated_at']);
+        const updated = new Date(json[i]['updated_at']);
         json[i]['updated_at'] = monthNames[updated.getMonth()] + ' ' + updated.getDate() + ', ' + updated.getFullYear();
       }
       this.issues = json;

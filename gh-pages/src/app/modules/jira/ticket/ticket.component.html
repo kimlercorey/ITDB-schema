@@ -8,7 +8,7 @@
       <aside>
         <div *ngIf="isOpen[i]">
           <ul>
-            <li><strong>Description:</strong><br>{{item["Description"]}}</li>
+            <li><markdown-to-html [data]="item['Description']"></markdown-to-html></li>
             <li><strong>Status:</strong> {{item["Status"]}}</li>
             <li><strong>Issue Type:</strong> {{item["Issue Type"]}}</li>
             <li><strong>Created:</strong> {{item["Created"]}}</li>
