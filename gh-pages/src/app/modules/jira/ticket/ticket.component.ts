@@ -14,19 +14,19 @@ export class TicketComponent implements OnInit {
   constructor(private _api: ApiService) { }
 
   public ngOnInit() {
-    // console.log(this._api);
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
     this._api.loadData('./assets/data/egovjira.json').subscribe((results) => {
+      let json = results;
+      for (var i = 0; i < json.length; i++) {
+        let created = new Date(json[i]['Created']);
+        json[i]['Created'] = monthNames[created.getMonth()] + ' ' + created.getDate() + ', ' + created.getFullYear();
 
-      // console.log(results)
-      // do stuff with our data here.
-      // ....
-      // asign data to our class property in the end
-      // so it will be available to our template
-      console.log('Jira Tickets', results);
-
-      this.tickets = results;
+        let updated = new Date(json[i]['Updated']);
+        json[i]['Updated'] = monthNames[updated.getMonth()] + ' ' + updated.getDate() + ', ' + updated.getFullYear();
+      }
+      this.tickets = json;
     });
-
-}
+  }
 
 }

@@ -15,12 +15,18 @@ export class IssueComponent implements OnInit {
   constructor(private _api: ApiService) { }
 
   public ngOnInit() {
-    // console.log(this._api);
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
     this._api.loadData(this.url).subscribe((results) => {
+      let json = results;
+      for (var i = 0; i < json.length; i++) {
+        let created = new Date(json[i]['created_at']);
+        json[i]['created_at'] = monthNames[created.getMonth()] + ' ' + created.getDate() + ', ' + created.getFullYear();
 
-        console.log('Issues', results);
-        this.issues = results;
+        let updated = new Date(json[i]['updated_at']);
+        json[i]['updated_at'] = monthNames[updated.getMonth()] + ' ' + updated.getDate() + ', ' + updated.getFullYear();
+      }
+      this.issues = json;
     });
-
-}
+  }
 }

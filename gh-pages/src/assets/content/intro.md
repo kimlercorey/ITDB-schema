@@ -6,7 +6,7 @@ Other resources provided on this site include:
 
 * [Important Dates](/#/schedule)
 * [Federal IT Dashboard Development Schedules](/#/schedule)
-* [Issue Tracking](/#/issues?url=https:%2F%2Fapi.github.com%2Frepos%2Fombegov%2FITDB-schema%2Fissues%3Fstate%3Dopen)
+* [Issue Tracking](/#/issues)
 * [Schema](/#/schema)
 * [Validations](/#/validations)
 * [IT Dashboard Development Team’s JIRA Board](/#/jira-board)
