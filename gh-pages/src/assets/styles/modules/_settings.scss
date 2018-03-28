@@ -213,35 +213,18 @@ $font-families: (
        (lightitalic, 300, italic, normal),
        (bold, 600, normal, normal),
        (bolditalic, 600, italic, normal)
-    ),
-  Source Sans Pro:
-    (
-       (light, 300, normal, normal),
-       (lightitalic, 300, italic, normal),
-       (semibold, 600, normal, normal),
-       (semibolditalic, 600, italic, normal)
-    ),
-  Trend Sans One:
-    (
-       (normal, normal, normal, normal)
     )
 );
 
 /*
    b. Font Stacks
-      Source Sans Pro - http://www.adobe.com/products/type/font-information/Source-Sans-Pro-Readme-file.html
-      Source Sans Pro was designed by Paul D. Hunt under the guidance of Robert Slimbach. It was
-      Adobe's first open source typeface family, conceived primarily as a typeface for user
-      interfaces. Source Sans Pro draws inspiration from the clarity and legibility of twentieth-
-      century American gothic typeface designs.
-
-      Trend Sans One - http://www.latinotype.com/display-weights?font=102
-      Trend was designed by Daniel Hernández and Paula Nazal Selaive of Latinotype. Trend is a font
-      made of layers, taking as a basis a sans and a slab font. It is the result of observation,
-      search and study of the latest global trends. Trend tries to capture the aesthetics of
-      fashion or even fashion itself, integrating elements of a very popular and current trend.
+      Merriweather - https://github.com/EbenSorkin/Merriweather
+      Merriweather was designed by Eben Sorkin of Sorkin Type, a type design foundry based in
+      Western Massachaussets. Merriweather was designed to be a text face that is pleasant to
+      read on screens. It features a very large x-height, slightly condensed letterforms, a
+      mild diagonal stress, sturdy serifs and open forms.
 */
-$font-family-base: Merriweather, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-base: Merriweather, Georgia, Times, "Times New Roman", serif;
 $font-family-mono: Hack, Consolas, Menlo, Monaco, 'Ubuntu Mono', 'Courier New', Courier, monospace;
 
 /*
