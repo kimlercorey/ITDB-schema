@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 
@@ -16,12 +16,60 @@ import { IntroComponent } from './modules/core/intro/intro.component';
 import { ScheduleComponent } from './modules/list/schedule/schedule.component';
 import { IssueComponent } from './modules/list/issue/issue.component';
 import { CodeComponent } from './modules/list/code/code.component';
+import { SchemaComponent } from './modules/list/code/schema/schema.component';
+import { SchemaCategoryComponent } from './modules/list/code/schema-category/schema-category.component';
 import { ValidationComponent } from './modules/list/validation/validation.component';
 import { TicketComponent } from './modules/jira/ticket/ticket.component';
 
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'intro',
+    pathMatch: 'full'
+  },
+  {
+    path: 'intro',
+    component: IntroComponent
+  },
+  {
+    path: 'schedule',
+    component: ScheduleComponent
+  },
+  {
+    path: 'issues',
+    component: IssueComponent
+  },
+  {
+    path: 'schema',
+    component: CodeComponent
+  },
+  {
+    path: 'schema/:schemaCat',
+    component: SchemaCategoryComponent
+  },
+  {
+    path: 'schema/:schemaCat/:schema',
+    component: SchemaComponent
+  },
+  {
+    path: 'validations',
+    component: ValidationComponent
+  },
+  {
+    path: 'jira-board',
+    component: TicketComponent
+  },
+  {
+    path: '**',
+    redirectTo: 'intro'
+  }
+];
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SchemaComponent,
+    SchemaCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +79,8 @@ import { TicketComponent } from './modules/jira/ticket/ticket.component';
     JiraModule,
     HttpModule,
     RouterModule,
-    MarkdownToHtmlModule.forRoot()
+    MarkdownToHtmlModule.forRoot(),
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]

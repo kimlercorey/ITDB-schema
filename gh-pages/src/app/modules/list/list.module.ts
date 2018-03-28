@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DataModule } from '../data/data.module';
 import { IssueComponent } from './issue/issue.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { ValidationComponent } from './validation/validation.component';
@@ -14,8 +15,9 @@ import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
   imports: [
     CommonModule,
     FormsModule,
+    DataModule,
     Ng2SearchPipeModule,
-    MarkdownToHtmlModule.forRoot(),
+    MarkdownToHtmlModule.forRoot()
   ],
   declarations: [IssueComponent, ScheduleComponent, ValidationComponent, DictionaryComponent, NavComponent, CodeComponent],
   exports: [IssueComponent, ScheduleComponent, ValidationComponent, DictionaryComponent, NavComponent, CodeComponent]

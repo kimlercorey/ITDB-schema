@@ -7,14 +7,8 @@ import { Http } from '@angular/http';
   styleUrls: ['./code.component.scss']
 })
 export class CodeComponent implements OnInit {
-  schema: any = '';
-  isOpen = {};
 
-  constructor(http: Http) {
-    http.get('https://raw.githubusercontent.com/scottmccaughey/ITDB-schema/master/gh-pages/src/assets/content/schema.md').subscribe(data => {
-      this.schema = data.text();
-    });
-  }
+  constructor() { }
 
   ngOnInit() {
   }
