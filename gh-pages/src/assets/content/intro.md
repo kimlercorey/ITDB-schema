@@ -13,13 +13,13 @@ Other resources provided on this site include:
 
 ## CPIC Guidance and Submission Instructions
 
-* [OMB Circular A-11](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/assets/a11_current_year/a11_2017.pdf target=_blank)
-* [FY19 IT Budget – Capital Planning Guidance](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/assets/egov_docs/fy19_it_budget_guidance.pdf target=_blank)
-* [Federal IT Dashboard Submission Guide](https://github.com/ombegov/ITDB-schema/blob/master/docs/ITDB_Submission_Instructions_v3_25.pdf target=_blank)
+* [OMB Circular A-11](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/assets/a11_current_year/a11_2017.pdf)
+* [FY19 IT Budget – Capital Planning Guidance](https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/assets/egov_docs/fy19_it_budget_guidance.pdf)
+* [Federal IT Dashboard Submission Guide](https://github.com/ombegov/ITDB-schema/blob/master/docs/ITDB_Submission_Instructions_v3_25.pdf)
 
 ## Feedback
 
-We encourage the CPIC community to comment and ask questions via the [CPIC Issues GitHub page](https://github.com/ombegov/ITDB-schema/issues target=_blank). As issues are updated, community subscribers will receive automated updates from GitHub. You can check the status of your issue via this page or via GitHub.
+We encourage the CPIC community to comment and ask questions via the [CPIC Issues GitHub page](https://github.com/ombegov/ITDB-schema/issues). As issues are updated, community subscribers will receive automated updates from GitHub. You can check the status of your issue via this page or via GitHub.
 
 We recommend the following format for submitting issues:
 
