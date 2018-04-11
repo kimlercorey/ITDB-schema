@@ -19,6 +19,7 @@ import { CodeComponent } from './modules/list/code/code.component';
 import { SchemaComponent } from './modules/list/code/schema/schema.component';
 import { ValidationComponent } from './modules/list/validation/validation.component';
 import { TicketComponent } from './modules/jira/ticket/ticket.component';
+import { AddendumsComponent } from './modules/core/addendums/addendums.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'jira-board',
     component: TicketComponent
+  },
+  {
+    path: 'addendums',
+    component: AddendumsComponent
   },
   {
     path: '**',

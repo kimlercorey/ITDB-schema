@@ -7,7 +7,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 
-import { IntroComponent } from '../core/intro/intro.component';
+import { IntroComponent } from './intro/intro.component';
+import { AddendumsComponent } from './addendums/addendums.component';
 import { ScheduleComponent } from '../list/schedule/schedule.component';
 import { IssueComponent } from '../list/issue/issue.component';
 import { CodeComponent } from '../list/code/code.component';
@@ -20,8 +21,8 @@ import { TicketComponent } from '../jira/ticket/ticket.component';
     RouterModule,
     MarkdownToHtmlModule.forRoot()
   ],
-  declarations: [MenuComponent, FooterComponent, MainnavComponent, IntroComponent],
-  exports: [MenuComponent, FooterComponent, MainnavComponent, IntroComponent]
+  declarations: [MenuComponent, FooterComponent, MainnavComponent, IntroComponent, AddendumsComponent],
+  exports: [MenuComponent, FooterComponent, MainnavComponent, IntroComponent, AddendumsComponent]
 
 })
 export class CoreModule { }
