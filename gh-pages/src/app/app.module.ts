@@ -2,8 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
+import { UiSwitchModule } from 'angular2-ui-switch';
 
 import { DataModule } from './modules/data/data.module';
 import { ListModule } from './modules/list/list.module';
@@ -37,6 +39,12 @@ const routes: Routes = [
   },
   {
     path: 'issues',
+    redirectTo: 'issues/open',
+    pathMatch: 'full'
+  },
+  {
+    path: 'issues/:state',
+    pathMatch: 'full',
     component: IssueComponent
   },
   {
@@ -46,8 +54,8 @@ const routes: Routes = [
   },
   {
     path: 'schema/:schemaCat',
-    redirectTo: 'schema',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    component: CodeComponent
   },
   {
     path: 'schema/:schemaCat/:schema',
@@ -78,6 +86,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     DataModule,
     ListModule,
     CoreModule,
@@ -85,6 +94,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule,
     MarkdownToHtmlModule.forRoot(),
+    UiSwitchModule,
     RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [],

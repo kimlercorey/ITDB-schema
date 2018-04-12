@@ -8,8 +8,9 @@ import { DictionaryComponent } from './dictionary/dictionary.component';
 import { NavComponent } from './validation/nav/nav.component';
 import { CodeComponent } from './code/code.component';
 import { FormsModule } from '@angular/forms';
-import { Ng2SearchPipeModule } from 'ng2-search-filter'; //importing the module
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
+import { UiSwitchModule } from 'angular2-ui-switch';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
     FormsModule,
     DataModule,
     Ng2SearchPipeModule,
-    MarkdownToHtmlModule.forRoot()
+    MarkdownToHtmlModule.forRoot(),
+    UiSwitchModule
   ],
   declarations: [IssueComponent, ScheduleComponent, ValidationComponent, DictionaryComponent, NavComponent, CodeComponent],
   exports: [IssueComponent, ScheduleComponent, ValidationComponent, DictionaryComponent, NavComponent, CodeComponent]

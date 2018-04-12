@@ -25,7 +25,7 @@ export class SchemaComponent implements OnInit {
       this.schema = params['schema'];
     });
 
-    this.exName = (this.schemaCat == 'InvestmentReport') ? '/examples/' : '/Examples/';
+    this.exName = (this.schemaCat === 'InvestmentReport') ? '/examples/' : '/Examples/';
 
     this.http.get(this.urlRoot + this.schemaCat + this.exName + this.schema + '.xml').subscribe(data => {
       const text = data.text().replace(/\n$/, '');

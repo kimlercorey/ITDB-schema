@@ -22,7 +22,7 @@ export class CodeComponent implements OnInit {
 
   ngOnInit() {
     this.schemaCats = ['BusinessCase', 'CIORating', 'ITBudget', 'InvestmentReport'];
-    for (var schemaCat of this.schemaCats) {
+    for (const schemaCat of this.schemaCats) {
       this.getSchema(schemaCat);
     }
   }

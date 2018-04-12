@@ -1,5 +1,5 @@
 <article>
-  <h1>Issues</h1>
+  <h1>Issues <span>Closed<ui-switch size="small" color="#afc6e9" [checked]="switchState" [(ngModel)]="switchState" (change)="switchChange()"></ui-switch>Open</span></h1>
   <div>
     <div *ngFor="let item of issues; let i = index" [attr.data-index]="i">
       <section>

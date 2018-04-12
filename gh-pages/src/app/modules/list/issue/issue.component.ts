@@ -1,25 +1,41 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ApiService } from '../../data/api.service';
+import { UiSwitchModule } from 'angular2-ui-switch';
 
 @Component({
   selector: 'app-issue',
   templateUrl: './issue.component.html',
-  styleUrls: ['./issue.component.css']
+  styleUrls: ['./issue.component.scss']
 })
 export class IssueComponent implements OnInit {
-
   isOpen = {};
   public issues;
-  url = 'https://api.github.com/repos/ombegov/ITDB-schema/issues?state=open';
+  url = 'https://api.github.com/repos/ombegov/ITDB-schema/issues?state=';
+  state;
+  switchState;
 
-  constructor(private _api: ApiService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private _api: ApiService
+  ) { }
 
-  public ngOnInit() {
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  switchChange() {
+    this.switchState = !this.switchState;
+    this.state = this.switchState ? 'open' : 'closed';
+    this.router.navigate(['../' + this.state], { relativeTo: this.route });
+    this.loadIssues();
+  }
 
-    this._api.loadData(this.url).subscribe((results) => {
-      let json = results;
-      for (var i = 0; i < json.length; i++) {
+  loadIssues() {
+    const monthNames = [
+      'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+
+    this._api.loadData(this.url + this.state).subscribe((results) => {
+      const json = results;
+      for (let i = 0; i < json.length; i++) {
         const created = new Date(json[i]['created_at']);
         json[i]['created_at'] = monthNames[created.getMonth()] + ' ' + created.getDate() + ', ' + created.getFullYear();
 
@@ -28,5 +44,14 @@ export class IssueComponent implements OnInit {
       }
       this.issues = json;
     });
+  }
+
+  public ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.state = params['state'] ? params['state'] : 'open';
+      this.switchState = (this.state === 'open') ? true : false;
+    });
+
+    this.loadIssues();
   }
 }
