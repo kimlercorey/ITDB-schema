@@ -9,6 +9,7 @@ import { NavComponent } from './validation/nav/nav.component';
 import { CodeComponent } from './code/code.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FilterPipeModule } from 'ngx-filter-pipe';
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
 import { UiSwitchModule } from 'angular2-ui-switch';
 
@@ -18,6 +19,7 @@ import { UiSwitchModule } from 'angular2-ui-switch';
     FormsModule,
     DataModule,
     Ng2SearchPipeModule,
+    FilterPipeModule,
     MarkdownToHtmlModule.forRoot(),
     UiSwitchModule
   ],

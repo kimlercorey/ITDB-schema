@@ -7,6 +7,10 @@
   }
 }
 
+.grid-gap {
+  grid-gap: $grid-gap-row $grid-gap-col;
+}
+
 .grid-gap-col {
   grid-column-gap: $grid-gap-col;
 }

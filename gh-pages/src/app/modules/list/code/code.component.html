@@ -1,8 +1,4 @@
 <article>
   <h1>Schema</h1>
-  <section>
-    <div *ngFor="let schemaCat of schemaCats">
-      <markdown-to-html [data]="content[schemaCat]"></markdown-to-html>
-    </div>
-  </section>
+  <section [innerHTML]="content"></section>
 </article>

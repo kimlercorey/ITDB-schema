@@ -15,14 +15,10 @@ body {
 
   > app-root {
     display: grid;
-    grid-template-areas:
-      'nav'
-      'main';
     grid-template-rows: auto auto;
 
     @include breakpoint(l) {
-      grid-template-areas: 'nav main';
-      grid-template-columns: 15% 1fr;
+      grid-template-columns: 17% 1fr;
       min-height: 100vh;
     }
   }
@@ -258,8 +254,11 @@ h6,
   font-size: $font-size-h6;
 }
 
-input {
+input,
+select {
   border: $border-base;
+  height: $line-height-form;
+  padding: $space-s;
 }
 
 label {
@@ -288,14 +287,9 @@ main article {
 
   > div > div {
     display: grid;
-    grid-template-areas:
-    'component'
-    'detail';
     grid-template-columns: auto;
 
     @include breakpoint(m) {
-      grid-template-areas:
-        'component detail';
       grid-template-columns: 50% 50%;
     }
 

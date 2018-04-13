@@ -68,8 +68,8 @@ nav {
         padding: $space-m;
 
         @include breakpoint(l) {
-          line-height: 3rem;
-          padding: 0 $space-m;
+          line-height: $space-l;
+          padding: $space-s $space-m;
         }
 
         &:active,
