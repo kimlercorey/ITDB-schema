@@ -17,14 +17,7 @@ const result = excelToJson({
     F: 'Loc in Data Dictionary',
     G: 'Validation Type',
     H: 'Validation Description',
-    I: 'Comments',
-    J: 'Analyst Recommendation',
-    K: 'Approval/Comment',
-    L: 'Dev/QA',
-    M: 'Status',
-    N: 'Dev Comments',
-    O: 'QA Comments',
-    P: 'BA Comments'
+    I: 'Comments'
   }
 });
 
