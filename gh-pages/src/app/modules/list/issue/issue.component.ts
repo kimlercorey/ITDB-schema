@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { UiSwitchModule } from 'ngx-ui-switch';
 import { ApiService } from '../../data/api.service';
-import { UiSwitchModule } from 'angular2-ui-switch';
 
 @Component({
   selector: 'app-issue',

@@ -44,7 +44,7 @@ export class ValidationComponent implements OnInit {
             case 'Section':
               const sectionIT =
                 (this.titleCase(vals[i][key]) === 'It Portfolio Summary') ? 'IT Portfolio Summary' : this.titleCase(vals[i][key]);
-              const section = '<section>' + sectionIT + '</section>';
+              const section = '<sectionName>' + sectionIT + '</sectionName>';
               vals[i][key] = section;
               this.sections.push(section);
               break;

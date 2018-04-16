@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { MarkdownToHtmlModule } from 'ng2-markdown-to-html';
-import { UiSwitchModule } from 'angular2-ui-switch';
+import { UiSwitchModule } from 'ngx-ui-switch';
 
 import { DataModule } from './modules/data/data.module';
 import { ListModule } from './modules/list/list.module';
