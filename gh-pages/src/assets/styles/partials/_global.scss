@@ -489,6 +489,15 @@ ul {
   text-decoration: none;
 }
 
+.loading {
+  background-image: url('/assets/images/svg/loader.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: $space-m;
+  min-height: 64px;
+  text-indent: -9999rem;
+}
+
 .on-dark {
   background-color: $color-dark-background;
   color: $color-dark-text;
@@ -580,11 +589,20 @@ ul {
   }
 }
 
+.table-striped {
+  tbody tr:nth-child(odd) {
+    th,
+    td {
+      background-color: color(grey, 95);
+    }
+  }
+}
+
 .table-responsive {
   th,
   td {
     display: block;
-    padding: $space-xs !important;
+    padding: $space-xs $space-s !important;
     word-break: break-word;
   }
 

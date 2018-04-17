@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
 import { GithubService } from '../../data/github.service';
 
 @Component({
@@ -8,27 +7,38 @@ import { GithubService } from '../../data/github.service';
   styleUrls: ['./code.component.scss']
 })
 export class CodeComponent implements OnInit {
-  schemaCats: any[];
-  businessCase;
-  content = {};
-  urlRoot = 'https://rawgit.com/scottmccaughey/ITDB-schema/master/gh-pages/src/assets/content/schema-';
+  schemaCats$: any;
+  monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
   constructor(
-    private http: Http,
     private _githubService: GithubService
   ) {}
 
-  getSchema(schemaCat) {
-    return this.http.get(this.urlRoot + schemaCat + '.md').subscribe(data => {
-      this.content[schemaCat] = data.text();
-    });
+  async getSchemas() {
+    const schemaCatsObject: any = await this._githubService.getSchemaCats().toPromise();
+    if (schemaCatsObject) {
+      for (const schemaCat of schemaCatsObject) {
+        const catExamples: any = await this._githubService.getExamples(schemaCat.name).toPromise();
+        if (catExamples) {
+          for (const catExample of catExamples) {
+            const fileInfo: any = await this._githubService.getFileInfo(catExample.path).toPromise();
+            const lastModDate = new Date(fileInfo[0].commit.author.date);
+            const lastMod = this.monthNames[lastModDate.getMonth()] + ' ' + lastModDate.getDate() + ', ' + lastModDate.getFullYear();
+            catExample.lastMod = lastMod;
+          }
+        }
+        schemaCat.examples = [];
+        for (const catExample of catExamples) {
+          catExample.name = catExample.name.slice(0, -4);
+          schemaCat.examples.push(catExample);
+        }
+      }
+    }
+    return schemaCatsObject;
   }
 
   ngOnInit() {
-    this.schemaCats = ['BusinessCase', 'CIORating', 'ITBudget', 'InvestmentReport'];
-    for (const schemaCat of this.schemaCats) {
-      this.getSchema(schemaCat);
-    }
+    this.schemaCats$ = this.getSchemas();
   }
 
 }

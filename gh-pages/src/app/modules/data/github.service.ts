@@ -1,14 +1,36 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class GithubService {
 
   private username = 'scottmccaughey';
-  private client_id = '65310d7db60de661723f';
-  private client_secret = '48a7ecf7a2a2090fa1ce8efba00410de608f0c5d';
+  private githubRoot = 'https://api.github.com/repos/ombegov/ITDB-schema/';
+  private githubContents = 'contents/src/';
+  private githubCommits = 'commits?path=';
+  private token = 'f255300ec05626a44e86d65f755b1567f5337c4f';
 
-  constructor( private _http: Http ) { }
+  constructor( private _http: HttpClient ) { }
+
+  getSchemaCats() {
+    const headers = new HttpHeaders();
+    return this._http.get(this.githubRoot + this.githubContents, {
+      headers: new HttpHeaders({'Authorization': 'token ' + this.token})
+    });
+  }
+
+  getExamples(schemaCat) {
+    const exampleFormat = (schemaCat === 'InvestmentReport') ? '/examples' : '/Examples';
+    return this._http.get(this.githubRoot + this.githubContents + schemaCat + exampleFormat, {
+      headers: new HttpHeaders({'Authorization': 'token ' + this.token})
+    });
+  }
+
+  getFileInfo(path) {
+    return this._http.get(this.githubRoot + this.githubCommits + path, {
+      headers: new HttpHeaders({'Authorization': 'token ' + this.token})
+    });
+  }
 
 }
