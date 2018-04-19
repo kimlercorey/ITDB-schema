@@ -13,8 +13,8 @@ export class ScheduleComponent implements OnInit {
   constructor(http: Http) {
     http.get('https://raw.githubusercontent.com/ombegov/ITDB-schema/master/README.md').subscribe(data => {
       let md = data.text();
-      let split = md.split('## Important Dates');
-      md = '## Important Dates' + split[1];
+      let split = md.split('## Vendor Meetings');
+      md = '## Vendor Meetings' + split[1];
       split = md.split('## Quick Links to Files');
       this.schedule = split[0];
     });
