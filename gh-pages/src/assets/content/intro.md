@@ -4,12 +4,12 @@ On this site you will find development resources related to Capital Planning and
 
 Other resources provided on this site include:
 
-* [Important Dates](/#/schedule)
-* [Federal IT Dashboard Development Schedules](/#/schedule)
-* [Issue Tracking](/#/issues)
-* [Schema](/#/schema)
-* [Validations](/#/validations)
-* [IT Dashboard Development Team’s JIRA Board](/#/jira-board)
+* [Important Dates](/ITDB-schema/#/schedule)
+* [Federal IT Dashboard Development Schedules](/ITDB-schema/#/schedule)
+* [Issue Tracking](/ITDB-schema/#/issues)
+* [Schema](/ITDB-schema/#/schema)
+* [Validations](/ITDB-schema/#/validations)
+* [IT Dashboard Development Team’s JIRA Board](/ITDB-schema/#/jira-board)
 
 ## CPIC Guidance and Submission Instructions
 
